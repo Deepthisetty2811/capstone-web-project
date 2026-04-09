@@ -82,7 +82,6 @@ capstone-web-project/
 ├── index.html
 ├── about.html
 ├── features.html
-├── contact.html
 │
 ├── css/
 │   └── styles.css
