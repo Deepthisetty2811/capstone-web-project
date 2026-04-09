@@ -269,7 +269,7 @@ Course: Web Technologies (23CSE404)
 
 ## 📧 Contact
 
-Email: your.email@example.com  
+Email: deepthisetty85@gmail.com 
 GitHub: https://github.com/Deepthisetty2811  
 
 ---
