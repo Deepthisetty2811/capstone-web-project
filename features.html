@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - TaskMaster Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">TaskMaster Pro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html" class="active">Features</a></li>
+                <li><a href="php/tasks.php">Tasks</a></li>
+                <li><a href="php/login.php">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Powerful Features</h1>
+            <p>Everything you need to boost your productivity</p>
+        </div>
+    </section>
+
+    <section class="features-detailed">
+        <div class="container">
+            <div class="feature-detail">
+                <div class="feature-icon">📝</div>
+                <div class="feature-info">
+                    <h3>Task Creation & Management</h3>
+                    <p>Create, edit, and organize tasks with ease. Add descriptions, set priorities, and assign due dates to keep everything on track.</p>
+                    <ul>
+                        <li>Quick task creation</li>
+                        <li>Priority levels (Low, Medium, High)</li>
+                        <li>Due date reminders</li>
+                        <li>Task categorization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-detail reverse">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-info">
+                    <h3>Customizable Interface</h3>
+                    <p>Personalize your workspace with themes, layouts, and custom views that match your workflow.</p>
+                    <ul>
+                        <li>Multiple theme options</li>
+                        <li>Flexible layout system</li>
+                        <li>Custom color schemes</li>
+                        <li>Dark mode support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-detail">
+                <div class="feature-icon">📊</div>
+                <div class="feature-info">
+                    <h3>Analytics & Reporting</h3>
+                    <p>Track your productivity with detailed analytics and visual reports that help you understand your work patterns.</p>
+                    <ul>
+                        <li>Productivity charts</li>
+                        <li>Task completion rates</li>
+                        <li>Time tracking</li>
+                        <li>Export reports</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-detail reverse">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-info">
+                    <h3>Collaboration Tools</h3>
+                    <p>Work together seamlessly with team members, share tasks, and coordinate projects effortlessly.</p>
+                    <ul>
+                        <li>Team workspaces</li>
+                        <li>Task assignment</li>
+                        <li>Real-time updates</li>
+                        <li>Comment threads</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="productivity-calculator">
+        <div class="container">
+            <h2>Productivity Time Calculator</h2>
+            <p>Calculate how much time you can save with better task management</p>
+            
+            <div class="calculator-card">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="tasksPerDay">Tasks per day:</label>
+                        <input type="number" id="tasksPerDay" value="10" min="1" max="100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="avgTimePerTask">Average time per task (minutes):</label>
+                        <input type="number" id="avgTimePerTask" value="30" min="1" max="480">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="efficiencyGain">Expected efficiency gain (%):</label>
+                        <input type="range" id="efficiencyGain" value="20" min="5" max="50" step="5">
+                        <span id="efficiencyValue">20%</span>
+                    </div>
+                    
+                    <button onclick="calculateSavings()" class="btn btn-primary">Calculate Savings</button>
+                </div>
+                
+                <div class="calculator-results" id="results">
+                    <h3>Your Potential Time Savings</h3>
+                    <div class="result-item">
+                        <span class="result-label">Daily time saved:</span>
+                        <span class="result-value" id="dailySavings">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Weekly time saved:</span>
+                        <span class="result-value" id="weeklySavings">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Monthly time saved:</span>
+                        <span class="result-value" id="monthlySavings">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Yearly time saved:</span>
+                        <span class="result-value highlight" id="yearlySavings">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TaskMaster Pro</h4>
+                    <p>Empowering productivity since 2024</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@taskmasterpro.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TaskMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
