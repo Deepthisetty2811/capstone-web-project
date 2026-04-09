@@ -277,7 +277,7 @@ GitHub: https://github.com/Deepthisetty2811
 ## 🔗 Links
 
 **Live Demo:** http://localhost/capstone-web-project  
-**Repository:** https://github.com/yourusername/capstone-web-project  
+**Repository:** https://github.com/Deepthisetty2811/capstone-web-project  
 
 ---
 
