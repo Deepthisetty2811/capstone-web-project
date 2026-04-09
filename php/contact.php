@@ -90,8 +90,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <h2>Contact Information</h2>
 <p>Reach out to us anytime.</p>
 
-<p><b>Email:</b> info@taskmasterpro.com</p>
-<p><b>Phone:</b> +91 9876543210</p>
+<p><b>Email:</b> Deepthisetty85@gamil.com</p>
+<p><b>Phone:</b> +91 7416698655</p>
 <p><b>Location:</b> Bangalore, India</p>
 </div>
 
