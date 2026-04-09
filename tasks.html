@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks - TaskMaster Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">TaskMaster Pro</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="tasks.html" class="active">Tasks</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Task Management</h1>
+            <p>Create and manage your tasks efficiently</p>
+        </div>
+    </section>
+
+    <section class="tasks-section">
+        <div class="container">
+            <!-- Add New Task Form -->
+            <div class="task-form-container">
+                <h2>Create New Task</h2>
+                <form id="taskForm" class="task-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taskTitle">Task Title *</label>
+                            <input type="text" id="taskTitle" name="title" required placeholder="Enter task title">
+                            <span class="error-message" id="titleError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taskPriority">Priority *</label>
+                            <select id="taskPriority" name="priority" required>
+                                <option value="">Select Priority</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                            <span class="error-message" id="priorityError"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="taskDueDate">Due Date *</label>
+                            <input type="date" id="taskDueDate" name="due_date" required>
+                            <span class="error-message" id="dateError"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taskCategory">Category</label>
+                            <select id="taskCategory" name="category">
+                                <option value="Work">Work</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Health">Health</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskDescription">Description</label>
+                        <textarea id="taskDescription" name="description" rows="3" placeholder="Enter task description"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </form>
+            </div>
+
+            <!-- Task Statistics -->
+            <div class="task-stats">
+                <div class="stat-box">
+                    <h3 id="totalTasks">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="completedTasks">0</h3>
+                    <p>Completed</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="pendingTasks">0</h3>
+                    <p>Pending</p>
+                </div>
+                <div class="stat-box">
+                    <h3 id="highPriorityTasks">0</h3>
+                    <p>High Priority</p>
+                </div>
+            </div>
+
+            <!-- Task Filter -->
+            <div class="task-filters">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="High">High Priority</button>
+                <button class="filter-btn" data-filter="Medium">Medium Priority</button>
+                <button class="filter-btn" data-filter="Low">Low Priority</button>
+            </div>
+
+            <!-- Task List -->
+            <div class="tasks-list" id="tasksList">
+                <!-- Sample tasks - these would normally come from PHP/MySQL -->
+                <div class="task-card" data-priority="High">
+                    <div class="task-header">
+                        <h3>Complete Web Project</h3>
+                        <span class="priority-badge high">High</span>
+                    </div>
+                    <p class="task-description">Finish the capstone web development project with all required features</p>
+                    <div class="task-meta">
+                        <span class="task-category">📁 Work</span>
+                        <span class="task-date">📅 2024-04-15</span>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn-small btn-complete">✓ Complete</button>
+                        <button class="btn-small btn-delete">🗑 Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-card" data-priority="Medium">
+                    <div class="task-header">
+                        <h3>Study for Exams</h3>
+                        <span class="priority-badge medium">Medium</span>
+                    </div>
+                    <p class="task-description">Review all subjects for upcoming semester exams</p>
+                    <div class="task-meta">
+                        <span class="task-category">📁 Personal</span>
+                        <span class="task-date">📅 2024-04-20</span>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn-small btn-complete">✓ Complete</button>
+                        <button class="btn-small btn-delete">🗑 Delete</button>
+                    </div>
+                </div>
+
+                <div class="task-card" data-priority="Low">
+                    <div class="task-header">
+                        <h3>Grocery Shopping</h3>
+                        <span class="priority-badge low">Low</span>
+                    </div>
+                    <p class="task-description">Buy groceries for the week</p>
+                    <div class="task-meta">
+                        <span class="task-category">📁 Shopping</span>
+                        <span class="task-date">📅 2024-04-12</span>
+                    </div>
+                    <div class="task-actions">
+                        <button class="btn-small btn-complete">✓ Complete</button>
+                        <button class="btn-small btn-delete">🗑 Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TaskMaster Pro</h4>
+                    <p>Empowering productivity since 2024</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@taskmasterpro.com</p>
+                    <p>Phone: +91 9876543210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TaskMaster Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/tasks.js"></script>
+</body>
+</html>
